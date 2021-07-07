@@ -168,6 +168,8 @@ ANNOTATIONS : https://github.com/developer0hye/Yolo_Label explqieur valeurs reto
 parler des modifs du cfg * 2
 Changed MaxPool size & Mish to Leaky ReLu
 
+https://drive.google.com/drive/folders/1EnpvadEDiTrAUQzlouOIwPMlPIdV6Pfh?usp=sharing
+
  objBox.box.setX(leftX); // translation: midX -> leftX
                 objBox.box.setY(topY); // translation: midY -> topY
                 objBox.box.setWidth(width);
