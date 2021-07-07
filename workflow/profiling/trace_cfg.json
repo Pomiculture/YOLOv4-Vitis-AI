@@ -1,0 +1,11 @@
+{
+    "options": {
+        "runmode": "normal",
+        "cmd": "/workspace/src/app/yolov3 yolov4 ./data/test_images ./output/images ./output/output.txt yolo_classes.txt U280",
+	"timeout": 10
+    },
+    "trace": {
+        "enable_trace_list": ["vitis-ai-library", "vart", "opencv", "custom"]
+    },
+    "trace_custom":  []
+}
