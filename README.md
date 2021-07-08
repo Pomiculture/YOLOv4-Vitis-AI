@@ -46,25 +46,13 @@ A [YOLOv4 model](https://www.analyticssteps.com/blogs/introduction-yolov4 "Intro
 
 ![YOLOv4 model](IMAGES/yolo_model.png)
 
-The original Darknet
+The original Darknet model was made from [this tutorial](https://medium.com/analytics-vidhya/train-a-custom-yolov4-object-detector-using-google-colab-61a659d4868 "TRAIN A CUSTOM YOLOv4 OBJECT DETECTOR (Using Google Colab)"). To implement your custom model, make your changes according to the section "Create your custom config file and upload it to your drive".
 
-original : https://medium.com/analytics-vidhya/train-a-custom-yolov4-object-detector-using-google-colab-61a659d4868
-change according to "Create your custom config file and upload it to your drive" et Create your obj.data and obj.names files and upload to your drive 
+To build the [dataset](https://github.com/Pomiculture/YOLOv4-Vitis-AI/tree/main/data "Dataset"), we used this [scraper](https://github.com/Menchit-ai/parse-google-image "Parsing google image"). 
 
-parler des modifs du cfg * 2
-Changed MaxPool size & Mish to Leaky ReLu
+To annotate the samples, we used [this GitHub project by developer0hye](https://github.com/developer0hye/Yolo_Label "Yolo_Label"). The annotations follow the template "image_name class_label x_top_left y_top_left width height".
 
-link to cfg and weights
-
-link thomas scrapper apples
-https://github.com/Menchit-ai/parse-google-image
-
-ANNOTATIONS : https://github.com/developer0hye/Yolo_Label explqieur valeurs retournées
- objBox.box.setX(leftX); // translation: midX -> leftX
-                objBox.box.setY(topY); // translation: midY -> topY
-                objBox.box.setWidth(width);
-                objBox.box.setHeight(height);
-                => CHANGER output file et eval_script, ou alors adapter label file
+To make the model fit the accelerator card, we had to change the MaxPool size, and convert the mish activations to leaky RELU. Our changes are based on [this tutorial](https://github.com/Xilinx/Vitis-Tutorials/blob/master/Machine_Learning/Design_Tutorials/07-yolov4-tutorial/README.md#21-darknet-model-training-on-coco "Vitis AI YOLOv4 tutorial"). The '*.cfg*' file can be found [here](model/darknet/yolov4_apple.cfg "Darknet.cfg") and the '*.weights*' can be downloaded [here](https://drive.google.com/drive/folders/1EnpvadEDiTrAUQzlouOIwPMlPIdV6Pfh?usp=sharing "YOLOv4 weights").
 
 ---
 <div id='requirements'/>
@@ -77,6 +65,10 @@ Before running the project, check the [requirements from Vitis AI](https://www.x
 **Weights file** :
 
 Please download the weights of the YOLOv4 trained model [here](https://drive.google.com/drive/folders/1EnpvadEDiTrAUQzlouOIwPMlPIdV6Pfh?usp=sharing "YOLOv4 weights"). Place the file in the folder */model/darknet*, alongside the '*.cfg*' [Darknet](https://pjreddie.com/darknet/ "Darknet") model.
+
+**Dataset folder** :
+
+Please unzip the [dataset folder](data/dataset_apples.zip "Apples dataset").
 
 **Versions** :
 - Docker : 20.10.6
