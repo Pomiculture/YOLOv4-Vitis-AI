@@ -204,6 +204,7 @@ https://towardsdatascience.com/evaluating-performance-of-an-object-detection-mod
 https://blog.paperspace.com/mean-average-precision/
 
 ---
+add a picture
 + def Yolo + histoire + Darknet 
 + TODO : dans intro expliquer les changements apportés au cfg (dire pk) et réintrainté derrière pour obtenir weights
 + TODO : dans intro faire references (Alexey et lien vers notebook et demander Thomas quelles modifs apportées pour pommes etc.)
