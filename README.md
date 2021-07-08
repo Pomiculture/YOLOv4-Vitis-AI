@@ -158,7 +158,7 @@ Let's evaluate the [_mAP_ score](https://www.kdnuggets.com/2020/08/metrics-evalu
 - Improve the labels display in the [application code](src/app/yolov3.cpp "App");
 - Run the [Vitis AI Profiler](profile.sh "Profile")
 
-In order to deploy on the accelerator card your own YOLOv4 or YOLOv3 model, replace the '*.cfg*' and '*.weights*' files in [this folder](model/darknet "Darknet model"). Then, change the environment variables that determine the model specifications defined in the script ["1_set_env.sh"](workflow/1_set_env.sh "Set environment variables"). Set the input shape in the [script that compiles the model](workflow/10_compile_model.sh "Compile model"). Don't forget to update the name and shape of the input and output tensors. Finally, replace the current dataset by your own in [this folder](data "Dataset").
+In order to deploy on the accelerator card your own YOLOv4 or YOLOv3 model, replace the '*.cfg*' and '*.weights*' files in [this folder](model/darknet "Darknet model"). Then, change the environment variables that determine the model specifications defined in the script ["1_set_env.sh"](workflow/1_set_env.sh "Set environment variables"). Set the input shape in the [script that compiles the model](workflow/10_compile_model.sh "Compile model"). Don't forget to update the name of the input and output tensors, and the shape of the input tensor. Finally, replace the current dataset by your own in [this folder](data "Dataset").
 
 ---
 <div id='references'/>
