@@ -64,11 +64,11 @@ Before running the project, check the [requirements from Vitis AI](https://www.x
 
 **Weights file** :
 
-Please download the weights of the YOLOv4 trained model [here](https://drive.google.com/drive/folders/1EnpvadEDiTrAUQzlouOIwPMlPIdV6Pfh?usp=sharing "YOLOv4 weights"). Place the file in the folder */model/darknet*, alongside the '*.cfg*' [Darknet](https://pjreddie.com/darknet/ "Darknet") model.
+🠊 Please download the weights of the YOLOv4 trained model [here](https://drive.google.com/drive/folders/1EnpvadEDiTrAUQzlouOIwPMlPIdV6Pfh?usp=sharing "YOLOv4 weights"). Place the file in the folder */model/darknet*, alongside the '*.cfg*' [Darknet](https://pjreddie.com/darknet/ "Darknet") model.
 
 **Dataset folder** :
 
-Please unzip the [dataset folder](data/dataset_apples.zip "Apples dataset").
+🠊 Please unzip the [dataset folder](data/dataset_apples.zip "Apples dataset").
 
 **Versions** :
 - Docker : 20.10.6
