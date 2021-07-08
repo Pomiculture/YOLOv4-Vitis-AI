@@ -54,6 +54,8 @@ Before running the project, check the [requirements from Vitis AI](https://www.x
 - **[Install the Vitis AI Docker image](DOC/Docker_&_Vitis_AI.md "Install Vitis AI Docker")**
 - **[Set up the Alveo U280 accelerator card](DOC/Alveo_Setup.md "Alveo U280 setup")**
 
+Please download the weights of the YOLOv4 trained model [here](https://drive.google.com/drive/folders/1EnpvadEDiTrAUQzlouOIwPMlPIdV6Pfh?usp=sharing "YOLOv4 weights")
+
 **Versions** :
 - Docker : 20.10.6
 - Docker Vitis AI image : 1.3.598   
@@ -188,7 +190,7 @@ ANNOTATIONS : https://github.com/developer0hye/Yolo_Label explqieur valeurs reto
 parler des modifs du cfg * 2
 Changed MaxPool size & Mish to Leaky ReLu
 
-https://drive.google.com/drive/folders/1EnpvadEDiTrAUQzlouOIwPMlPIdV6Pfh?usp=sharing
+
 
  objBox.box.setX(leftX); // translation: midX -> leftX
                 objBox.box.setY(topY); // translation: midY -> topY
