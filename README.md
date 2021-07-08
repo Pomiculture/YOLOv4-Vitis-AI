@@ -151,7 +151,7 @@ Let's evaluate the [_mAP_ score](https://www.kdnuggets.com/2020/08/metrics-evalu
 - Increase the [FPS](https://www.xilinx.com/html_docs/vitis_ai/1_3/him1591152509554.html "U280 Performance");
 - Modify the [AlexeyAB application](https://github.com/AlexeyAB/darknet "AlexeyAB Darknet") that runs the Darknet model on the host machine to measure the execution time of the inference;
 - Modify the [AlexeyAB application](https://github.com/AlexeyAB/darknet "AlexeyAB Darknet") to process the whole test set at once;
-- Evaluate the mAP score for the [AlexeyAB application](https://github.com/AlexeyAB/darknet "AlexeyAB Darknet") after changing the [output data](https://github.com/AlexeyAB/darknet#how-to-train-to-detect-your-custom-objects "AlexeyAB output") to fit the [annotations](https://github.com/developer0hye/Yolo_Label "Yolo_Label");
+- Evaluate the [mAP score](https://towardsdatascience.com/map-mean-average-precision-might-confuse-you-5956f1bfa9e2 "mAP (mean Average Precision) might confuse you!") for the [AlexeyAB application](https://github.com/AlexeyAB/darknet "AlexeyAB Darknet") after changing the [output data](https://github.com/AlexeyAB/darknet#how-to-train-to-detect-your-custom-objects "AlexeyAB output") to fit the [annotations](https://github.com/developer0hye/Yolo_Label "Yolo_Label");
 - [Modify the code to run the freeze/quantized TensorFlow graph](src/eval/run_graph.py "Run graph") to normalize the data to be able to evaluate its score;
 - [Modify the code to run the freeze/quantized TensorFlow graph](src/eval/run_graph.py "Run graph") to draw boxes when running the graph;
 - Improve the labels display in the [application code](src/app/yolov3.cpp "App");
