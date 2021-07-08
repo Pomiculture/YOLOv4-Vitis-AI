@@ -221,3 +221,4 @@ https://blog.roboflow.com/a-thorough-breakdown-of-yolov4/
 + dire quoi modifier pour sa propre app (dataset + setenv dataset adn shapes + node names after converting to TF, etc. + DPU arch pour compile)
 + Constitution du dataset par requêtes Internet des variétés de pommes via l'API GoogleSearch dont les noms sont indiqués dans un fichier txt. ?
 
+axes amelio : taille labels
