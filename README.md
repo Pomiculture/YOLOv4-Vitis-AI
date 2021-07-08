@@ -43,7 +43,7 @@ In our case, the hardware platform is an [Alveo™ Data Center Accelerator Card]
 <div id='yolo'/>
 
 ## 3) YOLO
-A [YOLOv4 model](https://www.analyticssteps.com/blogs/introduction-yolov4 "Introduction to YOLOv4") is able to detect objects in images through bounding boxes, classify the objects among a prefefined list of classes, and attribute a confidence score for each prediction. 
+A [YOLOv4 model](https://www.analyticssteps.com/blogs/introduction-yolov4 "Introduction to YOLOv4") is able to detect objects in images through bounding boxes, classify the objects among a prefefined list of classes, and attribute a confidence score for each prediction. Please read [this article](https://becominghuman.ai/explaining-yolov4-a-one-stage-detector-cdac0826cbd7 "Explanation of YOLO V4 a one stage detector") and [this one](https://blog.roboflow.com/a-thorough-breakdown-of-yolov4/ "Breaking Down YOLOv4") too to better understand the concept.
 
 ![YOLOv4 model](IMAGES/yolo_model.png)
 
