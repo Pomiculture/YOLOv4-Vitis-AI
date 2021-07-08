@@ -54,7 +54,7 @@ Before running the project, check the [requirements from Vitis AI](https://www.x
 - **[Install the Vitis AI Docker image](DOC/Docker_&_Vitis_AI.md "Install Vitis AI Docker")**
 - **[Set up the Alveo U280 accelerator card](DOC/Alveo_Setup.md "Alveo U280 setup")**
 
-Please download the weights of the YOLOv4 trained model [here](https://drive.google.com/drive/folders/1EnpvadEDiTrAUQzlouOIwPMlPIdV6Pfh?usp=sharing "YOLOv4 weights")
+Please download the weights of the YOLOv4 trained model [here](https://drive.google.com/drive/folders/1EnpvadEDiTrAUQzlouOIwPMlPIdV6Pfh?usp=sharing "YOLOv4 weights"). Place the file in the folder */model/darknet*, alongside the '*.cfg*' [Darknet](https://pjreddie.com/darknet/ "Darknet") model.
 
 **Versions** :
 - Docker : 20.10.6
