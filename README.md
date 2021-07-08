@@ -49,6 +49,8 @@ A [YOLOv4 model](https://www.analyticssteps.com/blogs/introduction-yolov4 "Intro
 
 The original Darknet model was made from [this tutorial](https://medium.com/analytics-vidhya/train-a-custom-yolov4-object-detector-using-google-colab-61a659d4868 "TRAIN A CUSTOM YOLOv4 OBJECT DETECTOR (Using Google Colab)"). To implement your custom model, make your changes according to the section "Create your custom config file and upload it to your drive".
 
+Our model was trained to detect apples in images and determine whether they are clean or damaged.
+
 To build the [dataset](https://github.com/Pomiculture/YOLOv4-Vitis-AI/tree/main/data "Dataset"), we used this [scraper](https://github.com/Menchit-ai/parse-google-image "Parsing google image"). 
 
 To annotate the samples, we used [this GitHub project by developer0hye](https://github.com/developer0hye/Yolo_Label "Yolo_Label"). The annotations follow the template "image_name class_label x_top_left y_top_left width height".
