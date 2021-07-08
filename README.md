@@ -121,8 +121,9 @@ We used these model and dataset to quickly test our application code before depl
 ## 6) Results
 Here are some results after running the model on the FPGA :
 
-![Vitis AI workflow](IMAGES/res_1.jpg) ![Vitis AI workflow](IMAGES/res_2.jpg) ![Vitis AI workflow](IMAGES/res_3.jpg) ![Vitis AI workflow](IMAGES/res_4.jpg) 
-![Vitis AI workflow](IMAGES/res_5.jpg) ![Vitis AI workflow](IMAGES/res_6.jpg) ![Vitis AI workflow](IMAGES/res_7.jpg) ![Vitis AI workflow](IMAGES/res_8.jpg)
+![Vitis AI workflow](IMAGES/res_1.jpg) ![Vitis AI workflow](IMAGES/res_2.jpg) ![Vitis AI workflow](IMAGES/res_3.jpg) 
+![Vitis AI workflow](IMAGES/res_4.jpg) ![Vitis AI workflow](IMAGES/res_5.jpg) ![Vitis AI workflow](IMAGES/res_6.jpg) 
+![Vitis AI workflow](IMAGES/res_7.jpg) ![Vitis AI workflow](IMAGES/res_8.jpg)
 
 Let's evaluate the [_mAP_ score](https://www.kdnuggets.com/2020/08/metrics-evaluate-deep-learning-object-detectors.html "Metrics to Use to Evaluate Deep Learning Object Detectors") of the model running on the accelerator card. We set the confidence trheshold to 0.6 and the IoU threshold to 0.5.
 
