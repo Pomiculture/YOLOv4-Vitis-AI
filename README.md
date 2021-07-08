@@ -86,6 +86,7 @@ Before running the project, check the [requirements from Vitis AI](https://www.x
 
 ## 5) User Guide
 In this section, we are going to explain how to run the project. \
+Open a terminal and make sure to be located in the workspace directory. \
 This project is executed through a succession of bash files, located in the */workflow/* folder. \
 You may need to first set the permissions for the bash files :
 ```
@@ -104,25 +105,6 @@ cd docker_ws
 
 ![Vitis AI workflow](IMAGES/docker.png)
 
-Then, run the following script to execute the whole process.
-```
- source ./run_all.sh
-```
-This project is based on the workflow from Vitis AI tutorials using the [Anaconda](https://www.anaconda.com/ "Anaconda") environment for [TensorFlow](https://www.tensorflow.org/?hl=en "TensorFlow"), such as the [MNIST Classification using Vitis AI and TensorFlow 1.15](https://github.com/Xilinx/Vitis-Tutorials/tree/master/Machine_Learning/Design_Tutorials/02-MNIST_classification_tf "MNIST Classification using Vitis AI and TensorFlow 1.15").
-
-For more details, please consult this **[guide](DOC/Documentation.md "Documentation")**.
-
-
-
-
-........................................
-
-Open a terminal and make sur to be located in the workspace directory.
-
-blabla 5 et sous parties pour summary
-
-
-
 ### 5.1 Demo
 See this **[guide](DOC/Demo.md "Documentation")**.
 ```
@@ -131,7 +113,13 @@ source ./run_demo.sh
 We used these model and dataset to quickly test our application code before deploying our own model.
 
 ### 5.2 Application
-...
+Run the following script to execute the whole process.
+```
+ source ./run_all.sh
+```
+This project is based on the workflow from Vitis AI tutorials using the [Anaconda](https://www.anaconda.com/ "Anaconda") environment for [TensorFlow](https://www.tensorflow.org/?hl=en "TensorFlow").
+
+For more details, please consult this **[guide](DOC/Documentation.md "Documentation")**.
 
 ---
 <div id='results'/>
@@ -173,51 +161,34 @@ better annotation and more images
 + draw boxes when runnign graph
 amelio run software get inference duraiton and mAP score
 axe amelio = améliroer l’affichage des labels parfois coupés si en bordure ou peu lisible si chevauchemetn avec autres
+fps could be better (https://www.xilinx.com/html_docs/vitis_ai/1_3/him1591152509554.html)
+amelio : run profiler + eval scroe graph not normalized
+attention software not same output https://github.com/AlexeyAB/darknet#how-to-train-to-detect-your-custom-objects ?
 
 L’application produit un fichier du même format pour les confronter et obtenir le score.
 
+link to mAP score  with iou indication
 https://towardsdatascience.com/map-mean-average-precision-might-confuse-you-5956f1bfa9e2
 
 dire comment mettre son custom cfg (et attentions modifs) : modif dossier model (cfg et weights) + setenv dire quoi + dataset dire où
 
 dire qupoi changer pour propre truc
 
-attention software not same output https://github.com/AlexeyAB/darknet#how-to-train-to-detect-your-custom-objects ?
-
-amelio : run profiler + eval scroe graph not normalized
-
-link to mAP score  with iou indication
-+ link yolov4 tuto vitis ai
-+ + autres liens utiles
-
-fps could be better (https://www.xilinx.com/html_docs/vitis_ai/1_3/him1591152509554.html)
-
 https://towardsdatascience.com/image-data-labelling-and-annotation-everything-you-need-to-know-86ede6c684b1
 https://machinethink.net/blog/object-detection-with-yolo/
 https://medium.com/@vinay.dec26/yat-an-open-source-data-annotation-tool-for-yolo-8bb75bce1767
-
-est-ce que annotations côtés gauhe/drote bas/hat vs centrex, centry, widfth, height
-ou pt départ et déplacement selon x et selon y ?  => modifier output file et script d'éval
-todo = tracer coords dans une image
 
 https://www.kdnuggets.com/2020/08/metrics-evaluate-deep-learning-object-detectors.html
 https://towardsdatascience.com/evaluating-performance-of-an-object-detection-model-137a349c517b
 https://blog.paperspace.com/mean-average-precision/
 
 ---
-+ TODO : dans intro expliquer les changements apportés au cfg (dire pk) et réintrainté derrière pour obtenir weights
-
 + TODO : def anchors + bounding box + obj detect + NMS & IoU
 + pommes saines/affectées qui sert pour classificateur de pommes défectueuses
-+ axes amélio (score mAP faible, compile input shape écrite en dur?)
++ axes amélio (score mAP faible, compile input shape écrite en dur?) + axes amelio : taille labels + test cuda img cpu
 + Vitis Library (offers YOLOv3 ... avec lien)
-+ dire que propres pommes + lien vers Git Thomas scraper
-+ annotations plateforme lien et screens
-+ unzip dataset + model weights google drive link all downloadable and put in path
 https://becominghuman.ai/explaining-yolov4-a-one-stage-detector-cdac0826cbd7
 https://blog.roboflow.com/a-thorough-breakdown-of-yolov4/
 + blabla notebook original et alexey pour le Darknet
 + dire quoi modifier pour sa propre app (dataset + setenv dataset adn shapes + node names after converting to TF, etc. + DPU arch pour compile)
 + Constitution du dataset par requêtes Internet des variétés de pommes via l'API GoogleSearch dont les noms sont indiqués dans un fichier txt. ?
-
-axes amelio : taille labels + test cuda img cpu
