@@ -49,7 +49,7 @@ A [YOLOv4 model](https://www.analyticssteps.com/blogs/introduction-yolov4 "Intro
 
 The original Darknet model was made from [this tutorial](https://medium.com/analytics-vidhya/train-a-custom-yolov4-object-detector-using-google-colab-61a659d4868 "TRAIN A CUSTOM YOLOv4 OBJECT DETECTOR (Using Google Colab)"). To implement your custom model, make your changes according to the section "Create your custom config file and upload it to your drive".
 
-Our model was trained to detect apples in images and determine whether they are clean or damaged.
+Our model was trained to detect apples in images and determine whether they are clean or damaged. The classes are written in this [file](model/specs/apples_classes.txt "Classes") and the anchors [here](model/specs/yolov4_anchors.txt "anchors").
 
 To build the [dataset](https://github.com/Pomiculture/YOLOv4-Vitis-AI/tree/main/data "Dataset"), we used this [scraper](https://github.com/Menchit-ai/parse-google-image "Parsing google image"). 
 
@@ -147,6 +147,7 @@ Let's evaluate the [_mAP_ score](https://www.kdnuggets.com/2020/08/metrics-evalu
 <div id='improvement'/>
 
 ## 7) Axes of improvement
+- Find a way to be able to set the input shape with a variable when [compiling the model](workflow/10_compile_model.sh "Compile model");
 - Create and annotate a new test set;
 - Increase the [FPS](https://www.xilinx.com/html_docs/vitis_ai/1_3/him1591152509554.html "U280 Performance");
 - Modify the [AlexeyAB application](https://github.com/AlexeyAB/darknet "AlexeyAB Darknet") that runs the Darknet model on the host machine to measure the execution time of the inference;
@@ -156,6 +157,8 @@ Let's evaluate the [_mAP_ score](https://www.kdnuggets.com/2020/08/metrics-evalu
 - [Modify the code to run the freeze/quantized TensorFlow graph](src/eval/run_graph.py "Run graph") to draw boxes when running the graph;
 - Improve the labels display in the [application code](src/app/yolov3.cpp "App");
 - Run the [Vitis AI Profiler](profile.sh "Profile")
+
+In order to deploy on the accelerator card your own YOLOv4 or YOLOv3 model, replace the '*.cfg*' and '*.weights*' files in [this folder](model/darknet "Darknet model"). Then, change the environment variables that determine the model specifications defined in the script ["1_set_env.sh"](workflow/1_set_env.sh "Set environment variables"). Set the input shape in the [script that compiles the model](workflow/10_compile_model.sh "Compile model"). Finally, replace the current dataset by your own in [this folder](data "Dataset").
 
 ---
 <div id='references'/>
