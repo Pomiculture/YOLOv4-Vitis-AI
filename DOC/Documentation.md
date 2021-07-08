@@ -101,9 +101,9 @@ source ./workflow/7_run_graph.sh
 <div id='quantize'/>
 
 ## 7) Quantize the model
-We launch the [Vitis™ AI Quantizer for TensorFlow](https://www.xilinx.com/html_docs/xilinx2019_2/vitis_doc/tensorflow_1x.html#zuc1592307653938 "Vitis AI Quantizer") to convert the floating-point frozen graph */model/build/tensorflow/yolov4_apple_frozen.pb* (32-bit floating-point weights and activation values) to a fixed-point integer (8-bit integer - INT8) model by [quantizing](https://www.dictionary.com/browse/quantized "quantize") the weights/biases and activations to the given bit width. This way, we reduce the computing complexity without losing much quality. This transformed model requires less memory bandwidth, thus providing faster speed and higher power efficiency than the floating-point model. This is practical knowing that the FPGA is limited in terms of memory and bandwidth.
+We launch the [Vitis™ AI Quantizer for TensorFlow](https://www.xilinx.com/html_docs/xilinx2019_2/vitis_doc/tensorflow_1x.html#zuc1592307653938 "Vitis AI Quantizer") to convert the floating-point frozen graph */model/build/tensorflow/yolov4_apple_frozen.pb* (32-bit floating-point weights and activation values) to a fixed-point integer (8-bit integer - INT8) model by [quantizing](https://www.dictionary.com/browse/quantized "quantize") the weights/biases and activations to the given bit width. This way, we reduce the computing complexity without losing much quality. This transformed model requires less memory bandwidth, thus providing faster speed and higher power efficiency than the floating-point model. This is practical knowing that the FPGA is limited in terms of memory and bandwidth. [Here](https://www.xilinx.com/html_docs/vitis_ai/1_3/eku1570695929094.html "Vitis AI Quantizer Flow"), you can find some explanations about the quantizer flow.
 
-![Quantize](../IMAGES/Quantize.png)
+![Quantize](../IMAGES/quantize.PNG)
 
 The output is the quantized model, which is saved to the path */model/build/quantize/quantize_eval_model.pb*. After calibration, the quantized model is transformed into a DPU deployable model ready to be compiled. We have to indicate the name of the input and output nodes from the frozen graph, and the input shape. We also specify a number of iterations used for the calibration part.
 
@@ -119,7 +119,7 @@ source ./workflow/9_quantize_model.sh
 ## 8) Compile the model
 The [Vitis™ AI Compiler for TensorFlow](https://www.xilinx.com/html_docs/xilinx2019_2/vitis_doc/compiling_model.html "Compiling the Model") is called by the following script to compile the model */model/build/quantize/quantize_eval_model.pb* by mapping the network to an optimized DPU instruction sequence, according to the DPU of the target platform (DPUCAHX8H in our case). You can find the DPU configuration file in the path */opt/vitis_ai/compiler/arch/DPUCAHX8H/U280/arch.json*. The XCompiler (XIR based Compiler) constructs an internal computation graph as intermediate representation (IR) and performs several optimization steps.
 
-![Compile](../IMAGES/Compile.png)
+![Compile](../IMAGES/compile.PNG)
 
 We provide a name for the compiled model, *yolov4_apple.xmodel*, and we place it into the output folder */model/build/compile/yolov4_apple*. We also have to specify the input shape to the compiler.
 ```
