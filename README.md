@@ -54,6 +54,8 @@ change according to "Create your custom config file and upload it to your drive"
 parler des modifs du cfg * 2
 Changed MaxPool size & Mish to Leaky ReLu
 
+link to cfg and weights
+
 link thomas scrapper apples
 https://github.com/Menchit-ai/parse-google-image
 
