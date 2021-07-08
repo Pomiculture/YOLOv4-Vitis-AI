@@ -1,5 +1,5 @@
 # Setting Up the Host for Alveo accelerator card U280
-Here, we explain how to setup the [Alveo U280 Data Center Accelerator Card](https://www.xilinx.com/products/boards-and-kits/alveo/u280.html "Xilinx Alveo U280").
+Here, we explain how to setup the [Alveo U280 Data Center Accelerator Card](https://www.xilinx.com/products/boards-and-kits/alveo/u280.html "Xilinx Alveo U280"). We suppose that the board is already connected to the host machine through its [PCIe port](https://www.tomshardware.com/reviews/pcie-definition,5754.html "PCIe").
 
 *Sources* :
 - [Vitis AI Alveo card setup](https://github.com/Xilinx/Vitis-AI/blob/master/setup/alveo/u50_u50lv_u280/README.md "Alveo card setup")
