@@ -149,8 +149,6 @@ The mentionned projects below were used for this project as tools or source of i
 original : https://medium.com/analytics-vidhya/train-a-custom-yolov4-object-detector-using-google-colab-61a659d4868
 change according to "Create your custom config file and upload it to your drive" et Create your obj.data and obj.names files and upload to your drive 
 
-faire intro
-
 axe amelio :
 create new test set car biaisé (mais faute de temps)
 ameliorer fps
@@ -159,12 +157,17 @@ modify alexey app to measure execution time of inference
 evalgraph : normalize data to be able to evaluate its score, of the tf graph
 better annotation and more images
 + draw boxes when runnign graph
-
 amelio run software get inference duraiton and mAP score
+axe amelio = améliroer l’affichage des labels parfois coupés si en bordure ou peu lisible si chevauchemetn avec autres
+
+L’application produit un fichier du même format pour les confronter et obtenir le score.
 
 https://towardsdatascience.com/map-mean-average-precision-might-confuse-you-5956f1bfa9e2
 
 link thomas scrapper apples
+https://github.com/Menchit-ai/parse-google-image
+
+dire comment mettre son custom cfg (et attentions modifs) : modif dossier model (cfg et weights) + setenv dire quoi + dataset dire où
 
 dire qupoi changer pour propre truc
 
