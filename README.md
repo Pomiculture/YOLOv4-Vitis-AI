@@ -46,6 +46,24 @@ A [YOLOv4 model](https://www.analyticssteps.com/blogs/introduction-yolov4 "Intro
 
 ![YOLOv4 model](IMAGES/yolo_model.png)
 
+The original Darknet
+
+original : https://medium.com/analytics-vidhya/train-a-custom-yolov4-object-detector-using-google-colab-61a659d4868
+change according to "Create your custom config file and upload it to your drive" et Create your obj.data and obj.names files and upload to your drive 
+
+parler des modifs du cfg * 2
+Changed MaxPool size & Mish to Leaky ReLu
+
+link thomas scrapper apples
+https://github.com/Menchit-ai/parse-google-image
+
+ANNOTATIONS : https://github.com/developer0hye/Yolo_Label explqieur valeurs retournées
+ objBox.box.setX(leftX); // translation: midX -> leftX
+                objBox.box.setY(topY); // translation: midY -> topY
+                objBox.box.setWidth(width);
+                objBox.box.setHeight(height);
+                => CHANGER output file et eval_script, ou alors adapter label file
+
 ---
 <div id='requirements'/>
 
@@ -54,6 +72,7 @@ Before running the project, check the [requirements from Vitis AI](https://www.x
 - **[Install the Vitis AI Docker image](DOC/Docker_&_Vitis_AI.md "Install Vitis AI Docker")**
 - **[Set up the Alveo U280 accelerator card](DOC/Alveo_Setup.md "Alveo U280 setup")**
 
+**Weights file** :
 Please download the weights of the YOLOv4 trained model [here](https://drive.google.com/drive/folders/1EnpvadEDiTrAUQzlouOIwPMlPIdV6Pfh?usp=sharing "YOLOv4 weights"). Place the file in the folder */model/darknet*, alongside the '*.cfg*' [Darknet](https://pjreddie.com/darknet/ "Darknet") model.
 
 **Versions** :
@@ -149,10 +168,6 @@ The mentionned projects below were used for this project as tools or source of i
 - [Xilinx - Vitis AI Tutorials](https://github.com/Xilinx/Vitis-Tutorials/tree/master/Machine_Learning "Vitis AI tutorials")
 
 ---
-
-original : https://medium.com/analytics-vidhya/train-a-custom-yolov4-object-detector-using-google-colab-61a659d4868
-change according to "Create your custom config file and upload it to your drive" et Create your obj.data and obj.names files and upload to your drive 
-
 axe amelio :
 create new test set car biaisé (mais faute de temps)
 ameliorer fps
@@ -168,9 +183,6 @@ L’application produit un fichier du même format pour les confronter et obteni
 
 https://towardsdatascience.com/map-mean-average-precision-might-confuse-you-5956f1bfa9e2
 
-link thomas scrapper apples
-https://github.com/Menchit-ai/parse-google-image
-
 dire comment mettre son custom cfg (et attentions modifs) : modif dossier model (cfg et weights) + setenv dire quoi + dataset dire où
 
 dire qupoi changer pour propre truc
@@ -185,19 +197,6 @@ link to mAP score  with iou indication
 
 fps could be better (https://www.xilinx.com/html_docs/vitis_ai/1_3/him1591152509554.html)
 
-ANNOTATIONS : https://github.com/developer0hye/Yolo_Label explqieur valeurs retournées
-
-parler des modifs du cfg * 2
-Changed MaxPool size & Mish to Leaky ReLu
-
-
-
- objBox.box.setX(leftX); // translation: midX -> leftX
-                objBox.box.setY(topY); // translation: midY -> topY
-                objBox.box.setWidth(width);
-                objBox.box.setHeight(height);
-                => CHANGER output file et eval_script, ou alors adapter label file
-
 https://towardsdatascience.com/image-data-labelling-and-annotation-everything-you-need-to-know-86ede6c684b1
 https://machinethink.net/blog/object-detection-with-yolo/
 https://medium.com/@vinay.dec26/yat-an-open-source-data-annotation-tool-for-yolo-8bb75bce1767
@@ -211,10 +210,8 @@ https://towardsdatascience.com/evaluating-performance-of-an-object-detection-mod
 https://blog.paperspace.com/mean-average-precision/
 
 ---
-add a picture
-+ def Yolo + histoire + Darknet 
 + TODO : dans intro expliquer les changements apportés au cfg (dire pk) et réintrainté derrière pour obtenir weights
-+ TODO : dans intro faire references (Alexey et lien vers notebook et demander Thomas quelles modifs apportées pour pommes etc.)
+
 + TODO : def anchors + bounding box + obj detect + NMS & IoU
 + pommes saines/affectées qui sert pour classificateur de pommes défectueuses
 + axes amélio (score mAP faible, compile input shape écrite en dur?)
