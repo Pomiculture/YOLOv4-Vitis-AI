@@ -92,11 +92,17 @@ source ./workflow/6_run_tensorboard.sh
 <div id='graph'/>
 
 ## 6) Run and evaluate the graph
-We can run the TensorFlow frozen graph */model/build/tensorflow/yolov4_apple_frozen.pb* to evaluate the eventual loss of quality of the YOLOv4 model due to the transformations. The hereunder bash file runs the Python program *run_graph.py* from */src/eval*. It takes as arguments the path to the frozen graph, the name of the input and output nodes, the path to the test set */data/test_images*, the format of the images, *.jpg*, the text files containing the *es */model/specs/apples_classes.txt* and anchors */model/specs/yolov4_anchors.txt*, the threshold values for object detection and Non-Maximum Suppression, and the output text file containing the labels and coordinates of the bounding boxes corresponding to the detected apples */output/graph_eval/output.txt*.
+We can run the TensorFlow frozen graph */model/build/tensorflow/yolov4_apple_frozen.pb* to evaluate the eventual loss of quality of the YOLOv4 model due to the transformations. The hereunder bash file runs the Python program *run_graph.py* from */src/eval*. It takes as arguments the path to the frozen graph, the name of the input and output nodes, the path to the test set */data/test_images*, the format of the images, *.jpg*, the text files containing the *es */model/specs/apples_classes.txt* and anchors */model/specs/yolov4_anchors.txt*, the threshold values for object detection and Non-Maximum Suppression, and the output text file containing the labels and coordinates of the bounding boxes corresponding to the detected apples */output/2_graph/output.txt*.
 
 ```
 source ./workflow/7_run_graph.sh
 ```
+
+Evaluate the graph by running the following script. Be careful, this is still a work in progress.
+```
+source ./workflow/8_eval.sh
+```
+
 ---
 <div id='quantize'/>
 
@@ -182,16 +188,6 @@ Finally, we can evaluate the _mAP_ score by comparing with the data from the gro
 source ./workflow/17_eval_score.sh
 ```
 
-
-
-
-
----
-TODO : faire qqch pour eval_graph.sh et remplir section '6' du GUIDE with command + folder 2_graph
-
-TODO : pictures quantize + compile
-
-TODO : rassembler dans set_env les variables des bash
 
 
 
