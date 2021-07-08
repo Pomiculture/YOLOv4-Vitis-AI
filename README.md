@@ -155,6 +155,8 @@ https://towardsdatascience.com/map-mean-average-precision-might-confuse-you-5956
 
 link thomas scrapper apples
 
+dire qupoi changer pour propre truc
+
 attention software not same output https://github.com/AlexeyAB/darknet#how-to-train-to-detect-your-custom-objects ?
 
 amelio : run profiler + eval scroe graph not normalized
