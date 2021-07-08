@@ -39,7 +39,7 @@ In our case, the hardware platform is an [Alveo™ Data Center Accelerator Card]
 ![DPUCAHX8H Top-Level Block Diagram](IMAGES/DPUCAHX8H.png)
 
 ---
-<div id='gan'/>
+<div id='yolo'/>
 
 ## 3) YOLO
 ................................
@@ -62,6 +62,9 @@ Before running the project, check the [requirements from Vitis AI](https://www.x
 
 **Hardware** :
 - [Alveo U280 Data Center Accelerator Card](https://www.xilinx.com/products/boards-and-kits/alveo/u280.html "Alveo U280")
+
+---
+<div id='guide'/>
 
 ## 5) User Guide
 In this section, we are going to explain how to run the project. \
@@ -116,6 +119,11 @@ We used these model and dataset to quickly test our application code before depl
 <div id='results'/>
 
 ## 6) Results
+Here are some results after running the model on the FPGA :
+
+![Vitis AI workflow](IMAGES/res_1.jpg) ![Vitis AI workflow](IMAGES/res_2.jpg) ![Vitis AI workflow](IMAGES/res_3.jpg) ![Vitis AI workflow](IMAGES/res_4.jpg) 
+![Vitis AI workflow](IMAGES/res_5.jpg) ![Vitis AI workflow](IMAGES/res_6.jpg) ![Vitis AI workflow](IMAGES/res_7.jpg) ![Vitis AI workflow](IMAGES/res_8.jpg)
+
 Let's evaluate the [_mAP_ score](https://www.kdnuggets.com/2020/08/metrics-evaluate-deep-learning-object-detectors.html "Metrics to Use to Evaluate Deep Learning Object Detectors") of the model running on the accelerator card. We set the confidence trheshold to 0.6 and the IoU threshold to 0.5.
 
 | Model              | Original   | Intermediate graph  | App (on Alveo U280)         | 
@@ -193,26 +201,19 @@ https://towardsdatascience.com/evaluating-performance-of-an-object-detection-mod
 https://blog.paperspace.com/mean-average-precision/
 
 ---
-+ TODO results (mAP + Images good + comparison * 3) + show pictures app !
 + def Yolo + histoire + Darknet 
 + TODO : dans intro expliquer les changements apportés au cfg (dire pk) et réintrainté derrière pour obtenir weights
 + TODO : dans intro faire references (Alexey et lien vers notebook et demander Thomas quelles modifs apportées pour pommes etc.)
 + TODO : def anchors + bounding box + obj detect + NMS & IoU
 + pommes saines/affectées qui sert pour classificateur de pommes défectueuses
-+ blabla workflow
 + axes amélio (score mAP faible, compile input shape écrite en dur?)
-+ Faire photo Vitis AI *2
 + Vitis Library (offers YOLOv3 ... avec lien)
 + dire que propres pommes + lien vers Git Thomas scraper
-+ = refaire arbirescence summary
 + annotations plateforme lien et screens
 + unzip dataset + model weights google drive link all downloadable and put in path
-
 https://becominghuman.ai/explaining-yolov4-a-one-stage-detector-cdac0826cbd7
 https://blog.roboflow.com/a-thorough-breakdown-of-yolov4/
-
 + blabla notebook original et alexey pour le Darknet
 + dire quoi modifier pour sa propre app (dataset + setenv dataset adn shapes + node names after converting to TF, etc. + DPU arch pour compile)
-+ TODO : images folder with right and all images
 + Constitution du dataset par requêtes Internet des variétés de pommes via l'API GoogleSearch dont les noms sont indiqués dans un fichier txt. ?
 
