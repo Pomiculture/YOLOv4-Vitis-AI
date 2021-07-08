@@ -157,6 +157,8 @@ link thomas scrapper apples
 
 attention software not same output https://github.com/AlexeyAB/darknet#how-to-train-to-detect-your-custom-objects ?
 
+amelio : run profiler + eval scroe graph not normalized
+
 link to mAP score  with iou indication
 + link yolov4 tuto vitis ai
 + + autres liens utiles
