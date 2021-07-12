@@ -1,5 +1,5 @@
 # YOLOv4-Vitis-AI
-Custom YOLOv4 for apple recognition (clean/damaged) on Alveo U280 accelerator card using Vitis AI framework.
+Custom YOLOv4 (You Only Look Once) for apple recognition (clean/damaged) on Alveo U280 accelerator card using Vitis AI framework.
 
 ### Table of contents
 1) [Context](#context)
